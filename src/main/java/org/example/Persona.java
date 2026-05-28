@@ -19,10 +19,14 @@ public abstract class Persona {
 
     // Métodos de negocio a completar por el estudiante
     public void agregarCategoria(Categoria categoria) {
+        categorias.add(categoria);
         // TODO: Completar lógica método (añadir la categoría a la lista)
     }
 
     public void eliminarCategoria(Categoria categoria) {
+        if (categorias.remove(categoria)){
+            System.out.println("Categoria removida");
+        }else System.out.println("No hay categoria");
         // TODO: Completar lógica método (remover la categoría de la lista)
     }
 

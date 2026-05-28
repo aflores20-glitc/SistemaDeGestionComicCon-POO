@@ -12,6 +12,9 @@ public class Categoria {
     }
 
     public void mostrarInformacion() {
+        System.out.println("Nombre: "+getNombre());
+        System.out.println("Numero de cupos maximos: "+getNumeroCuposMaximos());
+        System.out.println("Popularidad estimada: "+getPopularidadEstimada());
         // TODO: Completar lógica método (imprimir los atributos de la categoría)
     }
 

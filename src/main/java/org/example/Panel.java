@@ -15,14 +15,32 @@ public class Panel {
     }
 
     public void agregarPanelista(Object panelista) {
+        this.panelistas.add(panelista);
+        System.out.println("Panelista agregado");
+
         // TODO: Completar lógica método (debe validar si es instancia de Persona o Agrupacion antes de añadir)
     }
 
     public void eliminarPanelista(Object panelista) {
+        if (this.panelistas.remove(panelista)){
+        System.out.println("Panelista agregado");
+        }else {
+            System.out.println("No hay panelista");
+        }
         // TODO: Completar lógica método
     }
 
     public void mostrarInformacion() {
+        System.out.println("Hora de la presentacion: "+getHoraPresentacion());
+        System.out.println("Tema de la presentacion: "+categoria.getNombre());
+        for (Object exponente : panelistas) {
+            if (exponente instanceof Persona p) {
+                p.mostrarInformacion();
+            }
+            else if (exponente instanceof Agrupacion a) {
+                a.mostrarInformacion();
+            }
+        }
         // TODO: Completar lógica método (mostrar hora, tema/categoría y quiénes exponen)
     }
 
